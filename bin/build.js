@@ -7,7 +7,12 @@ const BUILD_DIRECTORY = 'dist';
 const PRODUCTION = process.env.NODE_ENV === 'production';
 
 // Config entrypoint files
-const ENTRY_POINTS = ['src/index.ts'];
+const ENTRY_POINTS = [
+  'src/home/index.js',
+  'src/Global/index.js',
+  'src/reprise/index.js',
+  'src/missions/index.js',
+];
 
 // Config dev serving
 const LIVE_RELOAD = !PRODUCTION;
@@ -49,21 +54,9 @@ else {
  * Logs information about the files that are being served during local development.
  */
 function logServedFiles() {
-  /**
-   * Recursively gets all files in a directory.
-   * @param {string} dirPath
-   * @returns {string[]} An array of file paths.
-   */
-  const getFiles = (dirPath) => {
-    const files = readdirSync(dirPath, { withFileTypes: true }).map((dirent) => {
-      const path = join(dirPath, dirent.name);
-      return dirent.isDirectory() ? getFiles(path) : path;
-    });
-
-    return files.flat();
-  };
-
-  const files = getFiles(BUILD_DIRECTORY);
+  const files = ENTRY_POINTS.map((entryPoint) => {
+    return join(BUILD_DIRECTORY, entryPoint.replace('src/', ''));
+  });
 
   const filesInfo = files
     .map((file) => {
