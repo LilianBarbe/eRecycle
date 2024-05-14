@@ -1,4 +1,4 @@
-console.log('GLOBAL 🌐');
+console.log('GLOBAL! 🌐');
 
 // import
 import { gsap } from 'gsap';
