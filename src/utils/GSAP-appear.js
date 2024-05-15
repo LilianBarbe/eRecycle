@@ -17,7 +17,7 @@ export const makeContainersAppear = () => {
         scrollTrigger: {
           markers: false,
           trigger: container,
-          start: 'top 65%',
+          start: 'top 75%',
         },
       });
     });

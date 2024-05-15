@@ -12,6 +12,8 @@ const ENTRY_POINTS = [
   'src/Global/index.js',
   'src/reprise/index.js',
   'src/missions/index.js',
+  'src/home-groupe/index.js',
+  'src/article/index.js',
 ];
 
 // Config dev serving
