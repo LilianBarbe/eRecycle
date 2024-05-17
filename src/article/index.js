@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const anchorId = `toc-${title.toLowerCase().replace(/\s+/g, '-')}`;
       heading.id = anchorId;
 
-      const li = document.createElement('li');
+      const li = document.createElement('div');
       const anchor = document.createElement('a');
       anchor.textContent = title;
       anchor.href = `#${anchorId}`;
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tocFragment.appendChild(li);
     });
 
-    const ul = document.createElement('ul');
+    const ul = document.createElement('div');
     ul.appendChild(tocFragment);
     tocContainer.appendChild(ul);
   };
