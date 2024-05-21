@@ -15,6 +15,7 @@ const ENTRY_POINTS = [
   'src/home-groupe/index.js',
   'src/article/index.js',
   'src/rse/index.js',
+  'src/histoire-groupe/index.js',
 ];
 
 // Config dev serving

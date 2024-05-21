@@ -1,13 +1,13 @@
-// transition.js
+// page-load.js
 import { gsap } from 'gsap';
 
 import { getLenis } from '$utils/lenis.js';
 
-export function setupTransition() {
+export function setupTransition(onCompleteCb) {
   // page load
 
-  let tl = gsap.timeline({ defaults: { duration: 0.7 } });
-  tl.to('.transition_wrap', { yPercent: -100, ease: 'power2out' });
+  let tl = gsap.timeline({ defaults: { duration: 0.5 }, onComplete: onCompleteCb });
+  tl.to('.transition_wrap', { yPercent: -100, ease: 'power2.out' });
   tl.set('.transition_wrap', { display: 'none' });
 
   // link click

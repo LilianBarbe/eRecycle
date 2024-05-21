@@ -4,10 +4,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export const makeContainersAppear = () => {
-  gsap.utils;
-  gsap.utils;
   gsap.utils
-    .toArray('.u-container:not(.hero_contain, .cta_contain, .footer_contain, .header_contain)')
+    .toArray(
+      '.u-container:not(.hero_contain, .cta_contain, .footer_contain, .header_contain, .nav_contain, .banner_contain)'
+    )
     .forEach((container) => {
       gsap.from(container, {
         opacity: 0,
