@@ -37,6 +37,17 @@ export function initSwipers() {
           },
         },
       });
+
+      // Add click event to the slides of swiper1 to update swiper2
+      $process
+        .find('.swiper')
+        .eq(0)
+        .find('.swiper-slide')
+        .each(function (slideIndex) {
+          $(this).on('click', function () {
+            swiper2.slideTo(slideIndex);
+          });
+        });
     });
   }
 }
