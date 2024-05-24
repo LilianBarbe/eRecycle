@@ -19,6 +19,15 @@ const animationTitre = () => {
     types: 'lines',
   });
 
+  // Sélectionner l'élément avec la classe tp-widget-wrapper
+  var widgetWrapper = document.querySelector('.tp-widget-wrapper');
+
+  // Vérifier si l'élément existe
+  if (widgetWrapper) {
+    // Appliquer text-align: left au style de l'élément
+    widgetWrapper.style.textAlign = 'left';
+  }
+
   // Ajouter une structure pour pouvoir cibler le texte à l'intérieur des lignes
   heroTitle.lines.forEach((line) => {
     // Ajouter un conteneur autour du texte
@@ -79,7 +88,7 @@ const imgZoomInner = () => {
 document.addEventListener('DOMContentLoaded', function () {
   setupTransition(() => {
     initLenis();
-    imgZoomInner();
+    // imgZoomInner();
     initSwiperBasic();
     initTestimonials();
     makeContainersAppear();

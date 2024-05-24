@@ -5,9 +5,11 @@ import { getLenis } from '$utils/lenis.js';
 
 export function setupTransition(onCompleteCb) {
   // page load
-
-  let tl = gsap.timeline({ defaults: { duration: 0.5 }, onComplete: onCompleteCb });
-  tl.to('.transition_wrap', { yPercent: -100, ease: 'power2.out' });
+  let tl = gsap.timeline({
+    defaults: { duration: 0.5, ease: 'power2.out' },
+    onComplete: onCompleteCb,
+  });
+  tl.to('.transition_wrap', { height: '0vh', ease: 'power2.out' });
   tl.set('.transition_wrap', { display: 'none' });
 
   // link click
@@ -26,7 +28,7 @@ export function setupTransition(onCompleteCb) {
           onComplete: () => (window.location.href = currentUrl),
         });
         tl.set('.transition_wrap', { display: 'flex' });
-        tl.fromTo('.transition_wrap', { yPercent: 100 }, { yPercent: 0 });
+        tl.fromTo('.transition_wrap', { height: '0vh' }, { height: '100vh' });
       }
     });
   });

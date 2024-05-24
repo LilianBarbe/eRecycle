@@ -9,24 +9,6 @@ const lenis = getLenis();
 
 gsap.registerPlugin(ScrollTrigger);
 
-let lastScrollY = 0;
-const navWrap = document.querySelector('.nav_contain');
-
-ScrollTrigger.create({
-  start: 0,
-  onUpdate: (self) => {
-    const currentScrollY = self.scroll();
-    if (currentScrollY > lastScrollY) {
-      // Scrolling down
-      gsap.to(navWrap, { yPercent: -100 }); // Adjust the value as per your need
-    } else {
-      // Scrolling up
-      gsap.to(navWrap, { yPercent: 0 });
-    }
-    lastScrollY = currentScrollY;
-  },
-});
-
 // const
 export const navMenuDropdowns = document.querySelectorAll('.nav_menu_dropdown');
 export const navOverlay = document.querySelector('.nav_overlay');
