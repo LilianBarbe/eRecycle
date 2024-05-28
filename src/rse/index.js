@@ -10,11 +10,11 @@ let counter1 = { value: 0 };
 let counter2 = { value: 0 };
 
 const updateCounter1 = () => {
-  document.querySelector('.conversion_numbers_item').innerText = `${Math.round(counter1.value)}%`;
+  document.querySelector('.conversion_numbers_num').innerText = `${Math.round(counter1.value)}`;
 };
 
 const updateCounter2 = () => {
-  document.querySelector('.conversion_numbers_item .is-2').innerText =
+  document.querySelector('.conversion_numbers_num.is-2').innerText =
     `${Math.round(counter2.value)}`;
 };
 

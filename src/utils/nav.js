@@ -16,8 +16,8 @@ export const navOverlay = document.querySelector('.nav_overlay');
 // Fonction pour afficher l'overlay
 export function showOverlay() {
   if (!navOverlay.classList.contains('active')) {
-    const lenis = getLenis();
-    lenis.stop();
+    // const lenis = getLenis();
+    // lenis.stop();
     navOverlay.style.display = 'block';
     gsap.fromTo(
       navOverlay,
@@ -36,8 +36,8 @@ export function showOverlay() {
 // Fonction pour masquer l'overlay
 export function hideOverlay() {
   if (navOverlay.classList.contains('active')) {
-    const lenis = getLenis();
-    lenis.start();
+    // const lenis = getLenis();
+    // lenis.start();
     gsap.to(navOverlay, {
       opacity: 0,
       duration: 0.3,
