@@ -6,7 +6,7 @@ export function initSwiperBasic() {
   if (window.innerWidth <= 991) {
     $('[data-swiper]').each(function (index) {
       const swiper = new Swiper($(this).find('.swiper')[0], {
-        slidesPerView: 1,
+        slidesPerView: 1.1,
         direction: 'horizontal',
         speed: 500,
         keyboard: true,
@@ -14,7 +14,7 @@ export function initSwiperBasic() {
           forceToAxis: true,
         },
         slideToClickedSlide: false,
-        spaceBetween: '8',
+        spaceBetween: '16',
         loop: false,
       });
     });
