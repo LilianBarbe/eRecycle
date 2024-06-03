@@ -73,3 +73,18 @@ export default {
   showOverlay,
   hideOverlay,
 };
+
+document.querySelector('.nav_mobile_btn').addEventListener('click', function () {
+  if (window.innerWidth < 991) {
+    const menu = document.querySelector('.nav_mobile_btn');
+    const lenis = getLenis();
+
+    if (menu.classList.contains('is-active')) {
+      menu.classList.remove('is-active');
+      lenis.start();
+    } else {
+      menu.classList.add('is-active');
+      lenis.stop();
+    }
+  }
+});

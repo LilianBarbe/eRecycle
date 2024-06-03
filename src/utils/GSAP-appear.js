@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 export const makeContainersAppear = () => {
   gsap.utils
     .toArray(
-      '.u-container:not(.hero_contain, .cta_contain, .footer_contain, .header_contain, .nav_contain, .banner_contain)'
+      '.u-container:not(.hero_contain, .cta_contain, .footer_contain, .header_contain, .nav_contain, .banner_contain, .blog_header_contain)'
     )
     .forEach((container) => {
       gsap.from(container, {
