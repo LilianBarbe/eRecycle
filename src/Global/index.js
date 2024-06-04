@@ -86,14 +86,12 @@ const imgZoomInner = () => {
 };
 
 document.addEventListener('DOMContentLoaded', function () {
-  setupTransition(() => {
-    initLenis();
-    // imgZoomInner();
-    initSwiperBasic();
-    initTestimonials();
-    makeContainersAppear();
-    putImagesIntoText();
-    openOneAccordeonAtOnce();
-    animationTitre();
-  });
+  initLenis();
+  // imgZoomInner();
+  initSwiperBasic();
+  initTestimonials();
+  makeContainersAppear();
+  putImagesIntoText();
+  openOneAccordeonAtOnce();
+  animationTitre();
 });
