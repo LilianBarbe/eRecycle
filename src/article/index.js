@@ -1,5 +1,3 @@
-// Sélectionne l'article et le container du sommaire (TOC)
-
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', () => {
   // Get the article container and the TOC container
@@ -18,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const li = document.createElement('div');
       const anchor = document.createElement('a');
+      anchor.classList.add('toc-item'); // Add the class here
       anchor.textContent = title;
       anchor.href = `#${anchorId}`;
       li.appendChild(anchor);
@@ -25,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const ul = document.createElement('div');
+    ul.classList.add('toc-list'); // Add the toc-list class here
     ul.appendChild(tocFragment);
     tocContainer.appendChild(ul);
   };
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const tocItems = document.querySelectorAll('[toc-wrap] a');
-  const titleElements = document.querySelectorAll('[article] [id]');
+  const titleElements = article.querySelectorAll('[id]');
 
   const setActiveItem = (targetId) => {
     tocItems.forEach((item) => {
@@ -73,10 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { rootMargin: '0px 0px -50% 0px' }
   );
 
-  document
-    .querySelector('[article]')
-    .querySelectorAll('h2')
-    .forEach((heading) => observer.observe(heading));
+  article.querySelectorAll('h2').forEach((heading) => observer.observe(heading));
 
   // handle anchor position
   const offsetAnchor = () => {
