@@ -12,7 +12,7 @@ const updateCounter1 = () => {
 };
 
 gsap.to(counter1, {
-  value: 9.6,
+  value: 96,
   scrollTrigger: {
     trigger: '.conversion_card',
     start: 'top 80%',
