@@ -1,5 +1,3 @@
-// histoire
-
 console.log('Histoire');
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -8,7 +6,7 @@ let counter1 = { value: 0 };
 let counter2 = { value: 0 };
 
 const updateCounter1 = () => {
-  document.querySelector('.conversion_numbers_item').innerText = `${counter1.value.toFixed(1)}%`;
+  document.querySelector('.conversion_numbers_item').innerText = `${Math.floor(counter1.value)}%`;
 };
 
 gsap.to(counter1, {
