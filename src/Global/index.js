@@ -46,11 +46,11 @@ const animationTitre = () => {
     .timeline()
     .set(['[data-line-animation]', '.header_layout h1, .w-richtext'], { visibility: 'visible' }) // Rendre visible au début de l'animation
     .from(lineInners, {
-      duration: 0.7,
-      y: '120%',
+      y: '100%',
       opacity: 0,
+      duration: 0.5,
+      ease: 'Second.out',
       stagger: 0.1,
-      ease: 'power4.out',
     });
 };
 
